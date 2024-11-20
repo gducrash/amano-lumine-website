@@ -54,6 +54,14 @@ a {
     text-decoration: none;
 }
 
+.star {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url($basePath + "/images/star.svg");
+    background-position: center;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -165,6 +173,14 @@ p {
             line-height: 1.6;
         }
     }
+    &.wide {
+        font-size: 18px;
+        line-height: 1.7;
+
+        @media (max-width: 700px) {
+            line-height: 1.6;
+        }
+    }
 
     span {
         color: var(--highlight);
@@ -185,8 +201,9 @@ p {
 .headline {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     gap: 8px;
-    max-width: 500px;
     text-align: center;
     margin-bottom: 80px;
 
@@ -197,10 +214,18 @@ p {
         font-weight: normal;
     }
 
+    h2 {
+        font-family: 'Dela Gothic One', sans-serif;
+        font-size: 40px;
+        color: white;
+        font-weight: normal;
+    }
+
     p {
         font-size: 20px;
         color: var(--fg0);
         opacity: 0.6;
+        max-width: 500px;
     }
 }
 

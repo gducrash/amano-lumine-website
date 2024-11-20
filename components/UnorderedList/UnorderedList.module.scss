@@ -1,0 +1,29 @@
+.list {
+    font-size: 20px;
+    color: var(--fg1);
+    line-height: 36px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    li {
+
+        > * {
+            display: inline-block;
+        }
+
+        > *:first-child {
+            margin-right: 20px;
+        }
+
+        > span {
+            color: #a8fcffb3;
+        }
+
+        > h2, > h1 {
+            font-size: 24px;
+            color: var(--highlight);
+        }
+    }
+}

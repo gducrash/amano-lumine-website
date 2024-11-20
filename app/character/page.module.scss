@@ -1,0 +1,16 @@
+.row {
+    align-items: center;
+}
+
+.lumi2 {
+    filter: drop-shadow(0px 0px 20px #445885);
+}
+.lumi3 {
+    filter: drop-shadow(0px 0px 20px #e8706568);
+}
+
+.reverseMobile {
+    @media screen and (max-width: 990px) {
+        flex-direction: column-reverse;
+    }
+}

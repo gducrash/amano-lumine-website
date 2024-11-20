@@ -22,7 +22,7 @@ export default function Download() {
 
             <div className={styles.items}>
                 <DownloadItem 
-                    cover="/voicebanks/cover0.png"
+                    cover="/voicebanks/iconsupernova.jpg"
                     title="Amano Lumine &#x2011;Supernova&#x2011;"
                     desc="All four Project SABeR voicebanks in one set"
                     type="Japanese CVVC"
@@ -34,7 +34,7 @@ export default function Download() {
                 />
 
                 <DownloadItem 
-                    cover="/voicebanks/cover0.png"
+                    cover="/voicebanks/iconspica.jpg"
                     title="Amano Lumine &#x2011;Spica&#x2011;"
                     color="#88AEFF"
                     desc="Voicebank with a childish tone"
@@ -43,11 +43,11 @@ export default function Download() {
                     lastUpdate={new Date(2024, 3, 22)}
                     fileSize={30.2}
                     downloadUrl="https://drive.google.com/file/d/1GU8pwgJjfGCRWOdAFlxMHNDw7rL9fioV/view?usp=sharing"
-                    sample="/sound/test2.mp3"
+                    sample="/sound/test.mp3"
                 />
 
                 <DownloadItem 
-                    cover="/voicebanks/cover0.png"
+                    cover="/voicebanks/iconantares.jpg"
                     title="Amano Lumine &#x2011;Antares&#x2011;"
                     color="#FF8888"
                     desc="Voicebank with a tense tone"
@@ -60,7 +60,7 @@ export default function Download() {
                 />
 
                 <DownloadItem 
-                    cover="/voicebanks/cover0.png"
+                    cover="/voicebanks/iconbetelgeuse.jpg"
                     title="Amano Lumine &#x2011;Betelgeuse&#x2011;"
                     color="#FFC568"
                     desc="Voicebank with a mature tone"
@@ -73,7 +73,7 @@ export default function Download() {
                 />
 
                 <DownloadItem 
-                    cover="/voicebanks/cover0.png"
+                    cover="/voicebanks/iconrigel.jpg"
                     title="Amano Lumine &#x2011;Rigel&#x2011;"
                     color="#88EDFF"
                     desc="Voicebank with a weak tone"
