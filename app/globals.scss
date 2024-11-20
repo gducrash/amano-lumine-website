@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100..800&family=Dela+Gothic+One&display=swap');
+
+$basePath: '/lumi';
+
+:root {
+    --bg: #07111a;
+    --fg0: #aafcffd0;
+    --fg1: #DEFEFFd0;
+    --highlight: #ffe0bb;
+}
+
+html {
+    color-scheme: dark;
+
+    &::selection {
+        background-color: #aafcff44;
+    }
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+body {
+    color: var(--fg1);
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    min-height: 100vh;
+
+    background-image: url($basePath + '/images/bottom.webp'), url($basePath + '/images/stars.webp');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom center, top center;
+    background-size: 1852px, 1280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 32px;
+    width: 100%;
+    max-width: 1240px;
+    gap: 60px;
+}
+
+.unavailable {
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+.menuList {
+    font-family: 'Martian Mono', monospace;
+
+    ul {
+        width: 100%;
+        display: flex;
+        font-size: 16px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        transition: 0.2s ease color;
+
+        @media (max-width: 700px) {
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 700px) {
+            font-size: 12px;
+        }
+
+        li {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+header {
+    color: white;
+}
+footer {
+    color: #a1c2ed86;
+    margin-top: 100px;
+}
+
+header ul:hover {
+    color: #ffffff99;
+}
+header ul li:hover {
+    color: white;
+}
+
+main {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+
+    @media (max-width: 990px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.btnRow {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+}
+.btnCol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+
+    &.big {
+        font-size: 24px;
+        line-height: 1.7;
+
+        @media (max-width: 700px) {
+            font-size: 22px;
+            line-height: 1.6;
+        }
+    }
+
+    span {
+        color: var(--highlight);
+    }
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: fadeIn .5s ease forwards;
+    &.trs {
+        animation: fadeOut .5s ease forwards;
+    }
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 80px;
+
+    h1 {
+        font-family: 'Dela Gothic One', sans-serif;
+        font-size: 48px;
+        color: white;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 20px;
+        color: var(--fg0);
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }   
+}
