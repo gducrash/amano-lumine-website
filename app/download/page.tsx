@@ -30,7 +30,6 @@ export default function Download() {
                     lastUpdate={new Date(2024, 3, 25)}
                     fileSize={198.7}
                     downloadUrl="https://drive.google.com/file/d/18n8Dgqi8VJPYa48IPGIzZSIpO3oeGrVi/view?usp=sharing"
-                    sample="/sound/test2.mp3"
                 />
 
                 <DownloadItem 
@@ -101,7 +100,7 @@ type DownloadItemProps = {
     lastUpdate: Date;
     fileSize: number;
     downloadUrl: string;
-    sample: string;
+    sample?: string;
 }
 
 const DownloadItem = ({ 
@@ -128,11 +127,11 @@ const DownloadItem = ({
                 }}>
                     Download <span>({fileSize.toFixed(1)} MB)</span>
                 </Button>
-                <Button small secondary icon={sampleIcon} iconStop={stopIcon}
+                { sample && <Button small secondary icon={sampleIcon} iconStop={stopIcon}
                     playable sound={src(sample)}
                 >
                     Sample
-                </Button>
+                </Button> }
             </div>
         </div>
     );
