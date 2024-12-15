@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100..800&family=Dela+Gothic+One&display=swap');
 
-$basePath: '/lumi';
+@import '../util/variables.scss';
 
 :root {
     --bg: #07111a;
+    --bg1: #162634;
     --fg0: #aafcffd0;
     --fg1: #DEFEFFd0;
     --highlight: #ffe0bb;
@@ -181,6 +182,12 @@ p {
             line-height: 1.6;
         }
     }
+    &.subtext {
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--fg0);
+        opacity: 0.8;
+    }
 
     span {
         color: var(--highlight);
@@ -225,7 +232,7 @@ p {
         font-size: 20px;
         color: var(--fg0);
         opacity: 0.6;
-        max-width: 500px;
+        max-width: 520px;
 
         a {
             color: var(--highlight);
@@ -239,11 +246,12 @@ p {
 
 .fancyList {
     font-family: 'Martian Mono', monospace;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
-    line-height: 2;
+    line-height: 2.4;
     width: 100%;
     max-width: 580px;
+    list-style: inside;
 
     a {
         color: var(--highlight);
@@ -258,7 +266,17 @@ p {
     }
 }
 
-.contentMono {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contentResource {
     font-size: 18px;
     font-family: 'Martian Mono', monospace;
     line-height: 1.6;
@@ -279,6 +297,15 @@ p {
         li {
             margin-bottom: 8px;
         }
+    }
+
+    ul, p {
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+        font-size: 18px;
+    }
+    .mono {
+        font-family: 'Martian Mono', monospace;
+        font-size: 16px;
     }
 }
 

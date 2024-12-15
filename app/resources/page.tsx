@@ -5,8 +5,7 @@ export default function Resources() {
     return (
         <div className="page">
             <div className="headline">
-                <h1>Additional Resources</h1>
-                <p>Blehhhh</p>
+                <h2>Additional Resources</h2>
             </div>
 
             <ul className="fancyList">

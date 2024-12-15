@@ -5,14 +5,14 @@ export default function TermsOfUse() {
     return (
         <div className="page">
             <div className="headline">
-                <h1>Voicebank Terms of Use</h1>
+                <h2>Voicebank Terms of Use</h2>
                 <p style={{ opacity: 1 }}>
                     <Link href="/resources">Back</Link>
                 </p>
             </div>
 
-            <div className="contentMono">
-            <p>
+            <div className="contentResource">
+            <p className="mono">
                 Last update: April 27, 2024
             </p>
 

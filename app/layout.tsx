@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.scss';
 import Link from 'next/link';
+import { src } from '@/util/functions';
 
 export const metadata: Metadata = {
     title: 'Amano Lumine',
@@ -14,6 +15,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+
+                <link rel="icon" href={src('/favicon.ico')} sizes="any" />
+            </head>
             <body>
                 <div className="content">
                     <header className="menuList">
